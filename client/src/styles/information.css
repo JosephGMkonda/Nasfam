@@ -1,0 +1,33 @@
+.information{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.informationItem{
+    flex: 1;
+    margin: 0px 20px;
+    padding: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+
+    box-shadow: -7px -1px 26px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -7px -1px 26px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -7px -1px 26px -1px rgba(0,0,0,0.75);
+}
+
+.informationTitle{
+    font-size: 25px;
+    font-weight: bold;
+    color: blueviolet;
+    margin: 5px;
+}
+
+.informationCount{
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(126, 105, 105);
+    
+}
+

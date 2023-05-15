@@ -13,7 +13,8 @@ async function connect(){
 
   }catch(err){
     log.info("Not Connected to db")
-  }
+    process.exit(1)
+  } 
   
 
 }
