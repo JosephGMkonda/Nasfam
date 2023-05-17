@@ -8,3 +8,8 @@
     font-size: 30px;
     color: blueviolet;
 }
+
+.homeCharts{
+    padding: 10px;
+    display: flex;
+}

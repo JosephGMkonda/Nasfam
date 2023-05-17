@@ -1,0 +1,8 @@
+.piechart{
+    flex: 2;
+    margin: 5px;
+    width: 100%;
+    height:70px;
+    cursor: pointer;
+    
+}

@@ -1,0 +1,6 @@
+.barchart{
+    flex: 2;
+    margin-right: 5px;
+    width: 100%;
+    cursor: pointer;
+}
