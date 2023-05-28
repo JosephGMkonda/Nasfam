@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt';
 import config from 'config';
 import {UserDocument} from './user.models'
 
-export interface SchemaDocument extends mongoose.Document{
+export interface SessionDocument extends mongoose.Document{
     user:UserDocument["_id"] ;
     valid: boolean;
     userAgent: string;
@@ -33,6 +33,6 @@ const sessionSchema = new mongoose.Schema({
 
 //model for the session Schema
 
-const SessionModel = mongoose.model("Session",sessionSchema)
+const SessionModel = mongoose.model<SessionDocument>("Session",sessionSchema)
 
 export default SessionModel;

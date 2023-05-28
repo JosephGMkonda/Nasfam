@@ -3,11 +3,12 @@ import Topbar from "./components/Topbar";
 import './app.css'
 import Home from "./pages/Home";
 
-import {BrowserRouter as Router, Switch, Route,Link} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Farmers from "./pages/Farmers";
 import Product from "./pages/Product";
-import NewFarmer from './pages/NewFarmer'
-import Login from "./pages/Login";
+import NewFarmer from "./pages/NewFarmer";
+
+import NewProduct from "./pages/NewProduct";
 
 
 function App() {
@@ -32,10 +33,16 @@ function App() {
        <Product/>
        </Route>
 
-       <Route path="/newFarmer">
+       <Route path="/addFarmer">
         <NewFarmer/>
-       
+
        </Route>
+
+       <Route path="/addProduct">
+
+        <NewProduct/>
+       </Route>
+
        </Switch>
        </div>
    </Router>

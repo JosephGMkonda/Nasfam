@@ -9,6 +9,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import {Link} from 'react-router-dom'
 
 
 
@@ -52,8 +53,11 @@ function Product() {
         </div>
 
         <div className='farmersTopRight'>
-
+            <Link to="/addProduct">
+            
           <button className="createButton">create</button>
+
+          </Link>
 
         </div>
 

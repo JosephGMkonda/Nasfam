@@ -72,7 +72,7 @@ function Farmers() {
         </div>
 
         <div className='farmersTopRight'>
-        <Link to="/newFamer">
+        <Link to="/addFarmer">
           <button className="createButton">create</button>
           </Link>
 

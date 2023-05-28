@@ -3,6 +3,7 @@ import { validatePassword } from "../service/user.service";
 import { createSession } from "../service/session.service";
 import { signJwt } from "../../utils/jwt.utils";
 import config from 'config'
+import { findSessions } from "../service/session.service";
 
 export async function createUserSessionHandler(req:Request, res:Response){
     //validate user password
@@ -20,12 +21,12 @@ export async function createUserSessionHandler(req:Request, res:Response){
     const accessToken = signJwt(
         {...user, session: session._id},
         {expiresIn: config.get("accessTokenTtl")}
-    );
+    ); 
 
     //create refresh token
     const refreshToken = signJwt(
         {...user, session: session._id},
-        {expiresIn: config.get("refreshTokenTtl")}
+        {expiresIn: config.get("accessTokenTtl")}
     );
 
     // returning accessToken and refreshToken
@@ -34,4 +35,18 @@ export async function createUserSessionHandler(req:Request, res:Response){
     
 
     
+}
+
+//get sessions of the user
+
+export async function getUserSessionsHandler(req: Request, res: Response){
+    const userId = res.locals.user._id;
+    
+    
+    const sessions = await findSessions({user: userId, valid: true})
+    console.log({sessions})
+    
+   
+    return res.send(sessions);
+
 }
