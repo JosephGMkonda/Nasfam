@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 import {UserDocument} from './user.models'
 import { customAlphabet } from 'nanoid'
 
-const nanoid = customAlphabet("abcdefghijklmnopqrstuvwxyz0123456789",10);
+const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz0123456789',10);
 
 
 export interface FarmerDocument extends mongoose.Document{
@@ -20,7 +20,7 @@ const farmerSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-        default: () => 'farmer_${nanoid}'
+        default: () => `farmer_${nanoid()}`
 
     },
     user:{type:mongoose.Schema.Types.ObjectId,ref:"User"},

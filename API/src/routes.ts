@@ -22,7 +22,7 @@ function routes(app:Express){
     app.post("/api/farmer", [requireUser, validationResource(createFarmerSchema)], createFarmerHandler)
     app.put("/api/farmer", [requireUser, validationResource(updateFarmerSchema)], updateFarmerHandler)
     app.delete("/api/farmer", [requireUser, validationResource(deleteFarmerSchema)], deleteFarmerHandler)
-    app.get("/api/farmer", validationResource(getFarmerSchema), getFarmerHandler)
+    app.get("/api/farmer:farmerId", validationResource(getFarmerSchema), getFarmerHandler)
 
 
 
